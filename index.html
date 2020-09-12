@@ -22,7 +22,7 @@
                         physical activity accurately, similar <a href="https://www.researchsquare.com/article/rs-17022/v1"> Fuller et al's study </a>, from which data is obtained. Furthermore,
                         we are trying to replicate those results, and try more classification methods to observe the performance of individual models and attempt to 
                         increase accuracy via ensemble methods. In the original study, it seems that experiments were done using all of the data at once, using the device
-                        as a binary feature (apple watch and fitbit) which yielded improved accuracy for fitbit's datapoints in contrast with apple watch's. However, this
+                        as a binary feature (Apple Watch and Fitbit) which yielded improved accuracy for Fitbit's datapoints in contrast to Apple Watch's. However, this
                         discrepancy might be due to a slight imbalance in the dataset for those two categories, which is why we first looked at the overall accuracy and then 
                         perform individual experiments for the two datasets, and obtained no significant accuracy differences between both devices' data. Moreover, we used a larger
                         test size proportion (5-fold stratified shuffled validation vs 10-fold). With respect to decision trees, we were able to outperform the original study's accuracy (41%-62% vs 77%) by
@@ -33,7 +33,13 @@
                         different results for Apple Watch and Fitbit data may occur in a machine learning experiment on all the data combined could be not be related to the measurements 
                         of the device. In general, this results show that both devices are reasonably reliable in measuring data that can be used to infer the activity state of the person
                         wearing the device. 
-                    </p>  
+                    </p>
+            
+            <h4 class="display-4 left">Conclusions</h4>
+                    <p> There is a strong potential for health related applications based on data obtained in wearable devices. The accuracy of predictions is likely
+                        to be improved not by adding more features but by training on larger data samples. Eliminating some features from the original data did not 
+                        decrease accuracy significantly, but training on separate, smaller datasets, did. 
+                    </p>
                         
             <hr>
                    

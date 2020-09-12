@@ -95,81 +95,22 @@
                         <figcaption>Performance of both individual and ensemble ML methods.</figcaption>
                     </figure>
                       </p>
-                      <h4 class="display-4 left">Linear Classifiers</h4>
-                      <p>Formally speaking, the Stochastic Gradient Descent method is an optimization algorithm (it seeks to minimize some function) and not per se 
-                          a model for classification. However, scikit learn's SGDClassifier is an instance in which we can select hyperparameters that will yield
-                          a classification model as a particular case. Since we are using hyperparameter optimization tools, we might as well select this method
-                          first. In general, what linear classifiers do is try to segment the space the data is embedded in, into regions that will correspond to the 
-                          classes in our task, using lines, planes or hyperplanes as separators. For Dataset-1, we have only 7 features for 47 different classes. 
-                          That could be enought provided that the data is
-                          very clearly separated in space, which is not the case in this example, as we can see from the pairwise projection plots 
-                          (of the simplified
-                          Dataset-2) above.
+                      <h4 class="display-4 left">Beyond the Confusion Matrix</h4>
+                      <p>Although it is a standard practice to include a confusion matrix after a classification task, we skip this part as there are 6 different
+                          classes and we could compress more information (although not quantitatively but qualitatively) in the following visualizations, since we can
+                          observe for 3 different variables (could be off course, any others) how is the predicted result deviated from the ground truth result. 
+                          For example, high-level activity was predicted for true low-level activity with a high calory calculation (which is performed with proprietary
+                          methods for each device) where as with heart rate, this happened across all measurements. 
                       </p>
-                      <h4 class="display-4 left">Non-linear Support Vector Machines</h4>
-                      <p>Roughly speaking, what suppor vector machines do is find hyperplanes in space that separate datapoints into regions associated with classes, very much like 
-                         linear classifiers, except that this regions are found in the space resulting form applying a non-linear transformation to the original 
-                          data feature space (if a SVM has a linear kernel, then it is a linear classifier). Such transformation is applied with the purpose of mapping
-                          datapoints into regions that are more easily separable than they were in the original space.
-                           
-                      </p>
-                      <h4 class="display-4 left">Neural Networks<h4>
-                      <p> Finally, a neural network is a concatenation of linear and non-linear transormations on the original space that make up a highly
-                          non-linear model for decision boundaries on the resulting space. Hence, this method adds a lot of complexity and it should be perfoming the best
-                          in terms of accuracy. In practice, there is always a trade off between complexity and efficiency, since more complex algorithms will 
-                          usually take longer to run. For example, if we are faced with a binary classification task on data that is clearly separable, there is no
-                          reason to use a neural network on the first attempt, since linear classifiers are very likely to work well. 
-                      </p>
-                      
-                          <h4 class="display-4 left">Hyperparameter Optimization<h4>    
-                      <p> The performance, efficiency and complexity of machine learning models is mainly set by the hyperparameters that we choose to use. 
-                          For simple datasets, sometimes the default parameters are good enough to produce a decent outcome. But when data is not so simple, 
-                          we are faced with making the decision of selecting not only a model that can perform as accurately as possible, but that is reasonably 
-                          fast for our purposes. Moreover, for large problems, trial and error (grid and random search methods) can be a very long and useless way 
-                          of selecting models and hyperparameters.
-                          For the latter, it's recommendable to use some form of optimization method. We use 3 different methods from the Python libraries 
-                          scikit-optimize, Hyperopt, and Optuna.   
-                      </p>
-                      
-                      <h4 class="display-4 left">Results<h4>    
-                      <p>
-                      For Dataset-1 model complexity helped increase the accuracy especially from the SGD (stochastic gradient descent linear classifier) to 
-                          the SVC (support vector machine) methods, and less so from SVC to the NN (neural network) method, even though the NN is much more complex.
-                          Moreover, for several iterations it was necessary to interrupt the hyperparameter search (due to running times), and therefore we cannot be 
-                          certain that the improvement obtained by going from SVC to NN is significant. Hence, we can infer that increasingly complex models will 
-                          improve decreasingly less due to the fact that the data has too many classes and not enough information to make out significant differences 
-                          between them. For the Dataset-2 overall accuracy was increased (which is expected since it became a simplified binary classification task) but
-                          there seems to be no improvement from SVC to NN, and very little improvement from SGD to SVC. At this point, since method complexity with
-                          hyperparameter optimization is failing to improve accuracy scores, we can conclude that it is pointless to keep trying even more complex models,
-                          since the data yields just enough information for the obtained accuracy scores in the different methods. 
-                      <figure>
-                        <img src="ML-data-exp/ml-exp/img/confusion.png" class="img-fluid" alt="Responsive image">
-                        <figcaption>Dataset-2 confusion matrix.</figcaption>
-                      </figure>     
-                          
-                      <figure>
-                        <img src="ML-data-exp/ml-exp/img/t1_mplot.png" class="img-fluid" alt="Responsive image">
-                        <figcaption>Dataset-1 Model Performance.</figcaption>
-                      </figure>
-                          
-                      <figure>
-                        <img src="ML-data-exp/ml-exp/img/t2_mplot.png" class="img-fluid" alt="Responsive image">
-                        <figcaption>Dataset-2 Model Performance.</figcaption>
-                      </figure>
-                          
-                      <figure>
-                        <img src="ML-data-exp/ml-exp/img/t1plot.png" class="img-fluid" alt="Responsive image">
-                        <figcaption>Dataset-1 Optimization Algorithms Performance.</figcaption>
-                      </figure>
-                          
-                      <figure>
-                        <img src="ML-data-exp/ml-exp/img/t2plot.png" class="img-fluid" alt="Responsive image">
-                        <figcaption>Dataset-2 Optimization Algorithms Performance.</figcaption>
-                      </figure>
-                          
                      
+                      <p>
+                      <figure>
+                        <img src="img/truevspredictedheart_rate.png" class="img-fluid" alt="Responsive image">
+                        <img src="img/truevspredictedsteps.png" class="img-fluid" alt="Responsive image">
+                        <img src="img/truevspredictedcalories.png" class="img-fluid" alt="Responsive image">
+                      </figure>
                       </p>
-                      <hr>
+                    
           </div>
     </div>
     

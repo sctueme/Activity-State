@@ -54,7 +54,7 @@
 
                     
             
-                    <p>All of the fundamental procedure to understand the data is done through Pandas Profiling library and available 
+                    <p>All of the fundamental procedures to understand the data is done through Pandas Profiling library and available 
                         <a href="https://sctueme.github.io/WebEDAforActSt/"> here</a>. In addition to the usual obligated EDA, we provide some visualizations
                         to understand the distributions across each activity state (for a total of 6) of two of the most important measurements in wearable devices: 
                         calories and heart rate. It seems that Apple Watch bivariate distributions for these variables are more compact and less sensitive to activity state.  
@@ -85,7 +85,8 @@
                       <h3 class="display-3 left">Classification</h3>
                       <p> Methods used for this task were Gaussian Naive Bayes, Decision Trees, K-Neighbors, Random Forest, Weighted and Unweighted Voting 
                           (with Gaussian Naive Bayes, Decision Trees, and K-Neighbors as base estimators, and weights defined proportionaly by previous performance),
-                          Adaptative Boosting (with Gaussian Naive Bayes and Decision Trees for base estimators), and Gradient Boosting (XGBoost). 
+                          Adaptative Boosting (with Gaussian Naive Bayes and Decision Trees for base estimators), and Gradient Boosting (XGBoost). We used 5-fold
+                          stratified (and shuffled) cross validation.
                           Overall accuracy for each model is ploted below:
                           
                          <figure>
@@ -96,8 +97,8 @@
                     </figure>
                       </p>
                       <h4 class="display-4 left">Beyond the Confusion Matrix</h4>
-                      <p>Although it is a standard practice to include a confusion matrix after a classification task, we skip this part as there are 6 different
-                          classes and we could compress more information (although not quantitatively but qualitatively) in the following visualizations, since we can
+                      <p>Although it is standard practice to include a confusion matrix after a classification task, we skip this part as there are 6 different
+                          classes and we could compress more information (not quantitatively but qualitatively) in the following visualizations, since we can
                           observe for 3 different variables (could be off course, any others) how is the predicted result deviated from the ground truth result. 
                           For example, high-level activity was predicted for true low-level activity with a high calory calculation (which is performed with proprietary
                           methods for each device) where as with heart rate, this happened across all measurements. 

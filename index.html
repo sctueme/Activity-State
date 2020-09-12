@@ -58,7 +58,10 @@
                         <a href="https://sctueme.github.io/WebEDAforActSt/"> here</a>. In addition to the usual "mandatory" EDA, we provide some visualizations
                         to understand the distributions across each activity state (for a total of 6) of two of the most important measurements in wearable devices: 
                         calories and heart rate. It seems that Apple Watch bivariate distributions for these variables are more compact and less sensitive to activity state.  
-                        
+                        It is important to keep in mind that some measurements might vary widely accross states; for example, after running for a long time, heart rate
+                        will keep its measurment at a high level even though the runner has stopped. Moreover, data from wearable commercial devices might not be accurate 
+                        against medical devices, but the actual value obtained from the measurements is not necessarily to measure heart rate (or other related variables)
+                        accurately, but to extract predictive power from them. 
                     <figure>
                         <img src="img/dist0.png" class="img-fluid" alt="Responsive image">
                         <img src="img/dist1.png" class="img-fluid" alt="Responsive image">

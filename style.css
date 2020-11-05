@@ -28,7 +28,8 @@ h5{
     margin:auto;
 }
 .img-table{
-    max-width: 500px;
+    max-width: 100%;
+    object-fit: cover;
 }
 video{
     width: 100%;

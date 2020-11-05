@@ -30,6 +30,7 @@ h5{
 .img-table{
     max-width: 100%;
     object-fit: cover;
+    height: auto;
 }
 video{
     width: 100%;
